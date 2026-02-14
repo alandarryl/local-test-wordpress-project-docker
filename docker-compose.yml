@@ -1,7 +1,7 @@
 services:
   db:
     image: mysql:8.0
-    container_name: wp_db
+    
     restart: always
     env_file:
       - .env
@@ -10,7 +10,7 @@ services:
 
   wordpress:
     image: wordpress:latest
-    container_name: wp_app
+    
     restart: always
     ports:
       - "8000:80"
@@ -23,7 +23,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: wp_pma
+    
     restart: always
     ports:
       - "8080:80"
